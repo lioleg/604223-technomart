@@ -4,62 +4,64 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="style.css">
-
-
   </head>
   <body>
-    <header class="main-header"> <!-- уточнить смысл класса main-header -->
-      <a class="main-header-logo">
-        <img src="img/index-header-logo.svg" width="368" height="153" alt="Логотип"> 
-        <!-- почему лого в демке внутри nav? -->      
-      </a>
-      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <nav class=""> <!-- в демке тут был класс main navigation -->
-        <ul class="site-navigation">
-          <li><a href=""></a>Главная</li>
-          <li><a href=""></a>Компания</li>
-          <li><a href="catalog.html">Каталог</a></li>          
-          <li><a href=""></a>Новости</li>
-          <li><a href=""></a>Спецпредложения</li>
-          <li><a href=""></a>Доставка</li>
-          <li><a href=""></a>Контакты</li>
-        </ul> 
+    <header class="main-header"> 
+      <section class="main-header-top">
+        <h2 class="visually-hidden">Верхний колонтитул шапки</h2>
+        <a class="main-header-logo">
+          <img src="img/index-header-logo.svg" width="300" height="150" alt="Логотип"> 
+        </a>
+        <div class="search">Поиск:</div>
+        <div class="order">
+          <ul>
+            <li class="order-bookmarks"><a href="">Закладки</a></li>
+            <li class="order-cart"><a href="">Корзина</a></li>
+            <li class="order-checkout"><a href="">Оформить заказ</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main-header-middle">
+        <h2>Интернет-магазин строительных материалов и инструментов для ремонта</h2>
+        <div class="header-contacts">
+          <p class="header-contacts-phone">+7 (812) 555-05-55</p>
+          <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+        </div>
         <ul class="user-navigation">
           <li><a class="login-button" href="">Войти</a></li>
           <li><a class="login-button" href="">Регистрация</a></li>
         </ul>
-      </nav>
-      <section class="header-contacts">
-        <h2>Контакты</h2>
-        <ul>
-          <li class="header-contacts-phone">+7 (812) 555-05-55</li>
-          <li class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</li>
-        </ul>
       </section>
 
-      <div class="search">Поиск:</div>
-      <section class="order">
-        <h2 class="visually-hidden">Информация для заказа</h2>
-        <ul>
-          <li class="order-bookmarks"><a href="">Закладки</a></li>
-          <li class="order-cart"><a href="">Корзина</a></li>
-          <li class="order-checkout"><a href="">Оформить заказ</a></li>
-        </ul>
+      <section class="main-header-bottom">
+        <nav class="main-navigation">
+          <ul class="site-navigation">
+            <li><a>Главная</a></li>
+            <li><a href="">Компания</a></li>
+            <li><a href="catalog.html">Каталог</a></li>          
+            <li><a href="">Новости</a></li>
+            <li><a href="">Спецпредложения</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul> 
+        </nav>
       </section>
     </header>
-    <main> <!-- зачем назначать класс тегу, который один на странице?  масло масленное? -->    
+    <main class="container">      
       <section class="company">
         <section class="company-about">
-          <h2>Компания "ТЕХНОМАРТ"</h2>
+          <h2>Компания "Техномарт"</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
           <ul class="company-partners">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
-            <li>ЖелДорЭКспедиция</li>
+            <li>ЖелДорЭкспедиция</li>
           </ul>
           <a class="button" href="">Подробнее о компании</a>
         </section>
+
         <section class="company-contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
@@ -68,33 +70,47 @@
         </section>
       </section>
     </main>
+
     <footer class="main-footer">
-      <a class="main-footer-logo">
-        <img src="img/index-footer-logo.svg" width="368" height="153" alt="Логотип">         
-      </a>   
-      <nav class="footer-navigation">
-        <nav class="site-navigation">
-          <ul>
-            <li><a href="">Компания</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="">Доставка</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </nav>
-        <nav class="catalog-navigation">
-          <ul>
-            <li><a href="">Материалы</a></li>
-            <li><a href="">Техника</a></li>
-            <li><a href="">Инструмент</a></li>
-            <li><a href="">Спецпредложения</a></li>
-          </ul>
-        </nav>
-      </nav>
-      <p class="footer-contacts">
-        г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br>
-        +7 (812) 555-05-55
-      </p>
+      <h2 class="visually-hidden">Подвал</h2>
+      <section class="main-footer-top">
+        <div>
+          <a class="main-footer-logo">
+            <img src="img/index-footer-logo.svg" width="368" height="153" alt="Логотип">         
+          </a>   
+          <nav class="footer-site-navigation">
+            <ul>
+              <li><a href="">Компания</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="">Доставка</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <p class="footer-contacts">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br>
+            +7 (812) 555-05-55
+          </p>
+          <nav class="footer-catalog-navigation">
+            <ul>
+              <li><a href="">Материалы</a></li>
+              <li><a href="">Техника</a></li>
+              <li><a href="">Инструмент</a></li>
+              <li><a href="">Спецпредложения</a></li>
+            </ul>
+          </nav>          
+        </div>
+      </section>
+
+      <section class="main-footer-bottom">
+        <div class="footer-copyright">
+          <p>
+            2010-2017 Компания "Техномарт"
+            Все права защищены
+          </p>        
+        </div>
         <div class="footer-social">
           <ul>
             <li><a class="social-button" href="#">Вконтакте</a></li>
@@ -102,20 +118,17 @@
             <li><a class="social-button" href="#">Инстаграм</a></li>
           </ul>
         </div>
-        <div class="footer-copyright">
-          <p>
-            2010-2017 Компания "Техномарт"<br>
-            Все права защищены
-          </p>        
+        <div class="footer-feedback">
           <p>
             Разработано - 
             <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
           </p>
-          <div class="footer-feedback">
+          <p>
             Обратная связь:<br>
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </div>
+          </p>
         </div>
+      </section>
     </footer>    
   </body>
 </html>
