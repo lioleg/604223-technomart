@@ -10,7 +10,7 @@
       <section class="main-header-top">
         <h2 class="visually-hidden">Верхняя часть шапки</h2>
         <a class="main-header-logo">
-          <img src="img/logo.png" width="220" height="47" alt="Техномарт"> 
+          <img src="img/logo.png" width="220" height="47" alt="Интернет-магазин Техномарт"> 
         </a>
         <div class="search">Поиск:</div>
         <div class="order">
@@ -67,9 +67,44 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <a href="https://maps.google.com/">
-            <img src="img/map.jpg" width="300" height="158" alt="Карта"> 
+            <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
           </a>
-          <a class="button" href="">Заблудились? Напишите нам!</a>
+          <a class="button" href="">
+            Заблудились? Напишите нам!
+          </a>
+        </section>
+        
+        <section class="modal modal-map">
+          <h2 class="visually-hidden">
+            Как до нас добраться
+          </h2>
+          <p>
+            <img src="img/modal-map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+          </p>
+          <button class="modal-close" type="button">
+            Закрыть
+          </button>
+        </section>
+
+        <section class="modal modal-message">
+          <h2 class="visually-hidden">
+            Форма обратной связи
+          </h2>
+          <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="message-item">
+              <label for="message-name">Ваше имя:</label>
+              <input id="message-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+            </p>
+            <p class="message-item">
+              <label for="message-mail">Ваш e-mail:</label>
+              <input id="message-mail" type="text" name="mail" value="" placeholder="email@example.com">
+            </p>
+            <p class="message-item">
+              <label for="message-text">Текст письма:</label>
+              <input id="message-text" type="text" name="mail" value="" placeholder="В свободной форме">
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>          
         </section>
       </div>
     </main>
