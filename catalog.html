@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header"> 
@@ -16,7 +16,6 @@
           <p>
             <label for="search-field">Поиск:</label>
             <input id="search-field" type="search" name="search" placeholder="Поиск:">
-            <input type="submit" value="Найти">
           </p>
         </form>  
         <div class="order">
@@ -35,9 +34,9 @@
           <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
         </div>
         <ul class="user-navigation">
-          <li><a href="">Равшан Джамшутович</a></li>
-          <li><a href="">Мои заказы</a></li>
-          <li><a href="">Личный кабинет</a></li>
+          <li><a href="" class="user-button user-navigation-exit">Равшан Джамшутович</a></li>
+          <li><a href="" class="user-navigation-orders">Мои заказы</a></li>
+          <li><a href="" class="user-navigation-cabinet">Личный кабинет</a></li>
         </ul>
       </div>
 
@@ -65,11 +64,11 @@
           <li><a>Перфораторы</a></li>
         </ul>
       </div>
-      <div class="">
+      <div class="catalog">
         <h2>Перфораторы</h2>
 
         <section class="filter">
-          <h2 class="visually-hidden">Фильтр</h2>
+          <h3 class="visually-hidden">Фильтр</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
             <div class="filter-manufacturer">
               <fieldset>
@@ -116,8 +115,8 @@
             <button class="filter-button" type="submit">Показать</button>
           </form>
         </section>
-        <section class="catalog">
-          <h2 class="visually-hidden">Каталог</h2>
+        <section class="catalog-cards">
+          <h3 class="visually-hidden">Каталог</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
               <h3>
@@ -133,8 +132,8 @@
                 <p class="new-price">15550 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -152,8 +151,8 @@
                 <p class="new-price">25500 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -171,8 +170,8 @@
                 <p class="new-price">12500 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -190,8 +189,8 @@
                 <p class="new-price">15550 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -209,8 +208,8 @@
                 <p class="new-price">25500 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -228,8 +227,8 @@
                 <p class="new-price">12500 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -247,8 +246,8 @@
                 <p class="new-price">15550 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -266,8 +265,8 @@
                 <p class="new-price">25500 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
 
@@ -285,8 +284,8 @@
                 <p class="new-price">12500 P.</p>
               </div>
               <p class="catalog-item-order">
-                <a class="button" href="">Купить</a>
-                <a class="button" href="">В закладки</a>
+                <a class="button button-buy" href="">Купить</a>
+                <a class="button button-bookmark" href="">В закладки</a>
               </p>
             </li>
           </ul>
@@ -342,7 +341,7 @@
         <div class="footer-feedback">
           <p>
             Разработано - 
-            <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+            <a href="https://htmlacademy.ru">HTML Academy</a>
           </p>
           <p>
             Обратная связь:<br>
@@ -359,10 +358,10 @@
       <div class="order-message">      
         <img src="img/item-added.svg" width="66" height="66" alt="Значок: товар добавлен"> 
         <p>
-          Товар добавлен в корзину
+          Товар добавлен в корзину!
         </p>
         <a class="button" href="">Оформить заказ</a>
-        <button class="button" type="button">Продолжить покупки</button>
+        <button class="button button-continue" type="button">Продолжить покупки</button>
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </div>
     </section>  

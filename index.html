@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header"> 
@@ -14,9 +14,8 @@
         </a>
         <form class="search" method="get" action="https://echo.htmlacademy.ru">
           <p>
-            <label for="search-field">Поиск:</label>
+            <label for="search-field" class="visually-hidden">Поиск:</label>
             <input id="search-field" type="search" name="search" placeholder="Поиск:">
-            <input type="submit" value="Найти">
           </p>
         </form>          
         <div class="order">
@@ -35,8 +34,8 @@
           <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
         </div>
         <ul class="user-navigation">
-          <li><a class="login-button" href="">Войти</a></li>
-          <li><a class="login-button" href="">Регистрация</a></li>
+          <li><a class="user-button user-navigation-enter" href="">Войти</a></li>
+          <li><a class="user-button user-navigation-registration" href="">Регистрация</a></li>
         </ul>
       </div>
 
@@ -71,9 +70,11 @@
         <section class="company-contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a href="https://maps.google.com/">
-            <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
-          </a>
+          <div>
+            <a href="https://maps.google.com/">
+              <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
+            </a>
+          </div>
           <a class="button" href="">
             Заблудились? Напишите нам!
           </a>
