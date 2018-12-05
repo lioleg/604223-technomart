@@ -69,7 +69,16 @@ a {
   text-decoration: none;
 }
 
-li {
+.order-menu li, 
+.header li,
+.user-navigation li,
+.site-navigation li, 
+.company-partners li, 
+.footer li, 
+.bread-crumbs li, 
+.filter-manufacturer li, 
+.filter-power li, 
+.catalog-cards li {
   list-style: none;  
 }
 
@@ -88,7 +97,7 @@ li {
   background-color:#f2f6f8;
 }
 
-.header-top {
+.order-navigation {
   font-family: 'Cuprum';
   font-size: 17px;
   line-height: 18px;
@@ -106,7 +115,7 @@ li {
   background-color: #32425c;
 }
 
-.order a{
+.order-menu a{
   font-family: 'Cuprum';
   font-size: 17px;
   line-height: 18px;
@@ -169,7 +178,7 @@ li {
   color: #ee3643;
 }
 
-.header-contacts-phone {
+.header-phone {
   font-family: 'Cuprum';
   font-size: 21px;
   line-height: 21px;
@@ -177,7 +186,7 @@ li {
   color: #ee3643;
 }
 
-.header-contacts-address {
+.header-address {
   font-family: 'Cuprum';
   font-size: 14px;
   line-height: 24px;
@@ -185,35 +194,37 @@ li {
   color: #32425c;
 }
 
-.user-button {
+.user-button a {
   font-family: 'Cuprum';
   font-size: 21px;
   line-height: 21px;
   text-align: left;
+/*  padding-top: 14px;
+  padding-bottom: 15px;*/
   color: #000000;  
 
   background-color: #ffffff;  
 }
 
-.user-navigation-enter:hover,
-.user-navigation-registration:hover,
-.user-navigation-orders:hover,
-.user-navigation-cabinet:hover {
+.user-enter:hover,
+.user-registration:hover,
+.user-orders:hover,
+.user-cabinet:hover {
   color: #ee3643;
 }
 
-.user-navigation-orders:active,
-.user-navigation-cabinet:active {
+.user-orders:active,
+.user-cabinet:active {
   color: rgba(50, 66, 92, 0.3);
 }
 
 .user-button:active,
-.user-navigation-exit:active {
+.user-exit:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-navigation-orders,
-.user-navigation-cabinet {
+.user-orders,
+.user-cabinet {
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;  
@@ -243,12 +254,12 @@ li {
   background-color: #ffffff;    
 }
 
-.company-about h2,
-.company-contacts h2 {
+.company h2 {
   font-family: 'Cuprum';
   font-size: 30px;
   line-height: 30px;
   text-align: left;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -269,11 +280,11 @@ li {
   color: #000000;  
 }
 
-.footer-top {
+.footer-top-wrapper {
   background-color: #32425c;    
 }
 
-.footer-bottom {
+.footer-bottom-wrapper {
   background-color: #293449;    
 }
 
@@ -456,4 +467,225 @@ li {
 
 .button-bookmark:active {
   color: rgba(50, 66, 92, 0.3);  
+}
+
+
+/*------------------------------ стили для сетки ------------------------------*/
+* { /*временно*/
+  /*outline: 1px solid #63a63e; */
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  /*padding: 0 10px;*/
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.order-navigation-wrapper .container {
+  display: flex;  
+}
+
+.header-logo {
+  width: 220px;
+  text-align: center;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  background-color: #ee3643;    
+}
+
+.search input {
+  width: 270px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+
+.order-menu {
+  display: flex;
+  margin: 0;
+  padding: 0; 
+  width: 450px;
+
+}
+
+.order-menu li {
+  width: 150px;    
+  text-align: center;
+  padding-top: 14px;
+}
+
+/*----------  ----------*/
+.header h1, 
+.header p, .header ul,
+.container p, .container ul,
+.footer p, .footer ul,
+.company h2
+{
+  margin: 0;
+  padding: 0;
+}
+
+.user-info .container, 
+.user-navigation {
+  display: flex; 
+  justify-content: flex-end;  
+}
+
+.header h1 {
+  width: 220px;
+  padding-top: 55px;
+  padding-bottom: 45px;
+} 
+
+.header-phone {
+  border: 2px solid white;
+
+  padding-top: 13px;
+  padding-bottom: 11px;  
+  margin-top: 45px;
+}
+
+.header-contacts li {
+  text-align: center;
+}
+
+.header-contacts {
+  width: 270px;    
+  margin-left: 70px;      
+}
+
+.header-contacts li {
+  width: 270px;    
+}
+
+.user-navigation li {
+  text-align: center;
+/*  padding-top: 14px;
+  padding-bottom: 15px;*/
+  margin-top: 45px;
+}
+
+.user-enter {
+  width: 120px; 
+  margin-left: 70px;    
+}
+
+.user-registration {
+  width: 150px;     
+}
+
+/*----------  ----------*/
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+
+  width: 940px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.site-navigation li {
+  width: 130px;  
+  padding-top: 22px; /*учесть, что высота строки больше высоты текста*/
+  padding-bottom: 26px;
+  text-align: center;
+}
+
+/*----------  ----------*/
+.company {
+  display: flex; 
+  justify-content: space-between;
+  padding-top: 82px;
+  padding-bottom: 86px;
+}
+
+.company-about {
+  width: 520px;     
+}
+
+.company-contacts {
+  width: 300px;     
+}
+
+/*----------  ----------*/
+.footer-site-navigation {
+  display: flex;   
+  justify-content: space-between;
+}
+
+.footer-site-navigation ul {
+  display: flex;   
+  justify-content: flex-end; 
+  padding-top: 45px;
+
+}
+
+a.footer-logo {
+  width: 220px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ee3643;    
+}
+
+.footer-site-navigation li,
+.footer-catalog-navigation li {
+  margin-left: 60px;
+}
+
+.footer-catalog-navigation {
+  display: flex;   
+  justify-content: space-between;  
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.footer-catalog-navigation ul {
+  display: flex;   
+  justify-content: flex-end;  
+}
+
+/*----------  ----------*/
+.footer-bottom-wrapper .container {
+  display: flex;   
+  justify-content: space-between;
+  padding-top: 39px;
+  padding-bottom: 35px;    
+}
+
+.footer-bottom-wrapper .container ul {
+  display: flex;   
+}
+
+.footer-copyright {
+  width: 230px;
+  margin-right: 160px;
+}
+
+.footer-feedback-mail {
+  width: 140px;
+  margin-left: auto;
+}
+
+.footer-feedback-site {
+  width: 100px;
+  margin-left: 50px;
 }
