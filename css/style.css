@@ -75,14 +75,28 @@ a {
 .site-navigation li, 
 .company-partners li, 
 .footer li, 
-.bread-crumbs li, 
+.breadcrumbs li, 
 .filter-manufacturer li, 
 .filter-power li, 
 .catalog-cards li {
   list-style: none;  
 }
 
+.header h1, 
+.header p, .header ul,
+.container p, .container ul,
+.footer p, .footer ul,
+.company h2
+{
+  margin: 0;
+  padding: 0;
+}
+
 .button {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 12px;
+
   font-family: 'Cuprum';
   font-size: 14px;
   line-height: 17.5px;
@@ -195,12 +209,15 @@ a {
 }
 
 .user-button a {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  margin-top: 45px;
+
   font-family: 'Cuprum';
   font-size: 21px;
   line-height: 21px;
-  text-align: left;
-/*  padding-top: 14px;
-  padding-bottom: 15px;*/
+  text-align: center;
   color: #000000;  
 
   background-color: #ffffff;  
@@ -233,6 +250,7 @@ a {
 }
 
 .site-navigation a {
+  display: block;
   font-family: 'Cuprum';
   font-size: 17px;
   line-height: 17px;
@@ -240,11 +258,10 @@ a {
   color: #ffffff;
 }
 
-.site-navigation li:hover {
+.site-navigation a:hover {
   background-color: #293449;  
 }
 
-.site-navigation li:active,
 .site-navigation a:active {
   color: rgba(255, 255, 255, 0.5);  
   background-color: #1d2739;  
@@ -278,6 +295,10 @@ a {
   line-height: 20px;
   text-align: left;
   color: #000000;  
+}
+
+.company-about .button {
+  width: 220px;
 }
 
 .footer-top-wrapper {
@@ -364,7 +385,14 @@ a {
   background-color: #ffffff;  
 }
 
-.bread-crumbs a {
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 25px;
+}
+
+.breadcrumbs a {
   font-family: 'PT Sans';
   font-size: 13px;
   line-height: 18px;
@@ -372,12 +400,60 @@ a {
   color: #000000;  
 }
 
-.catalog h2 {
+.catalog-page h2 {
+  padding-top: 32px;
+  padding-bottom: 34px;
+  padding-left: 30px;
+
   font-size: 30px;
+  font-weight: normal;
   line-height: 30px;
   text-transform: uppercase;  
   text-align: left;
-  color: #32425c;   
+  
+  color: #32425c;
+
+  background-color: #f2f6f8;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+}
+
+.catalog-item {
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  width: 220px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.catalog-item h3 a {
+  display: block;
+  width: 160px;
+  text-align: center;
+  margin: 0 32px;
+}
+
+.catalog-filter {
+  width: 220px;
+}
+
+.catalog-cards {
+  width: 700px;
+
 }
 
 .manufacturer-list, 
@@ -490,9 +566,8 @@ a {
 
 .container {
   width: 940px;
-  margin: 0 auto;
-  padding: 0;
-  /*padding: 0 10px;*/
+  margin: 0 auto;  
+  padding: 0 10px;
 }
 
 .header {
@@ -501,6 +576,7 @@ a {
 
 .order-navigation-wrapper .container {
   display: flex;  
+
 }
 
 .header-logo {
@@ -525,23 +601,15 @@ a {
 
 }
 
-.order-menu li {
+.order-menu a {
+  display: block;
   width: 150px;    
   text-align: center;
   padding-top: 14px;
+  padding-bottom: 13px;
 }
 
 /*----------  ----------*/
-.header h1, 
-.header p, .header ul,
-.container p, .container ul,
-.footer p, .footer ul,
-.company h2
-{
-  margin: 0;
-  padding: 0;
-}
-
 .user-info .container, 
 .user-navigation {
   display: flex; 
@@ -575,36 +643,53 @@ a {
   width: 270px;    
 }
 
-.user-navigation li {
-  text-align: center;
-/*  padding-top: 14px;
-  padding-bottom: 15px;*/
-  margin-top: 45px;
-}
-
-.user-enter {
+.user-enter a {
   width: 120px; 
   margin-left: 70px;    
 }
 
-.user-registration {
+.user-registration a {
   width: 150px;     
+  margin-left: 10px;    
 }
+
+.user-exit a {
+  width: 300px;     
+  /*margin-left: 50px;    */
+}
+
+.catalog-page .user-info .user-navigation {
+  display: block;
+  width: 300px;     
+  margin-left: 50px;    
+
+}
+
+.user-info .user-links {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+
+  margin-left: 17px;    
+  margin-right: auto;
+
+  text-align: center;
+}
+
 
 /*----------  ----------*/
 .site-navigation {
   display: flex;
   justify-content: space-between;
 
-  width: 940px;
   margin: 0;
   padding: 0;
 
 }
 
-.site-navigation li {
+.site-navigation a {
   width: 130px;  
-  padding-top: 22px; /*учесть, что высота строки больше высоты текста*/
+  padding-top: 22px; 
   padding-bottom: 26px;
   text-align: center;
 }
