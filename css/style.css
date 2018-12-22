@@ -1471,14 +1471,23 @@ a.footer-logo {
   margin-bottom: 29px;
   
   border: 2px solid #dee3e4;
+  border-radius: 3px;
   resize: none;
-
+  outline: none;
 
   font-family: 'PT Sans';
   font-size: 13px;
   line-height: 20px;
   text-align: left;
   color: #a9a9a9;
+}
+
+.message-item textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.message-item textarea:active {
+  border-color: #ee3643;
 }
 
 .message-form::before {
@@ -1525,9 +1534,17 @@ a.footer-logo {
   width: inherit;  
   box-sizing: border-box;
   border: 2px solid #dee3e4;
-
+  border-radius: 3px;
+  outline: none;
 }
 
+.message-item input:hover {
+  border-color: #b5b5b5;
+}
+
+.message-item input:active {
+  border-color: #ee3643;
+}
 
 .message-item:nth-child(1) {
   margin-left: 80px;
