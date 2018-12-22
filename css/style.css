@@ -111,7 +111,7 @@ a {
 
   border-radius: 4px;
   border: none;
-
+  outline: none;
   background-color:#ee3643;
 }
 
@@ -586,12 +586,23 @@ a {
   line-height: 18px;
 }
 
-.order-message .button-continue {
+.button-continue {
   line-height: 18px;
   color: #000000;
+  background-color: #ffffff;  
+  border: 1px solid #e5e5e5;
+}
 
+.button-continue:hover {
+  border-color: #bdc6ca;
   background-color: #ffffff;  
 }
+
+.button-continue:active {
+  border-color: #ee3643;
+  background-color: #ffffff;  
+}
+
 
 .breadcrumbs {
   display: flex;
@@ -1025,7 +1036,6 @@ a {
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
   outline: none;
-
 }
 
 .filter-button:hover {
@@ -1390,7 +1400,6 @@ a.footer-logo {
 
 .footer-feedback .footer-feedback-mail {
   width: 140px;
-  /*margin-left: 120px;*/
 }
 
 .footer-feedback .footer-feedback-site {
@@ -1400,21 +1409,25 @@ a.footer-logo {
 }
 
 .modal {
-  display: none;
   position: fixed;
-
+  background-color: #ffffff;
+  z-index: 30;
 }
 
-.modal-map {
-  position: relative;
-  min-height: 500px;
-}
-
-.modal-map p {
-  position: absolute;
+.modal-map {  
+  top: 50%;
   left: 50%;
-  margin-left: -470px;  
-  margin-top: 25px;
+
+  transform: translateY(-50%); 
+  margin-left: -470px;
+
+  width: 940px;
+  height: 446px;  
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.modal-map p {  
+  margin: 0;
 }
 
 .modal-close {
@@ -1422,7 +1435,7 @@ a.footer-logo {
 
   position: absolute;
   top: 9px;
-  right: 9px;
+  right: 7px;
 
   width: 25px;
   height: 25px;
@@ -1452,21 +1465,37 @@ a.footer-logo {
   box-sizing: border-box;
 
   width: 460px;
-  padding-top: 13px;
-  padding-left: 16px;
+  padding-top: 9px;
+  padding-left: 13px;
+  margin-top: 6px;
+  margin-bottom: 29px;
+  
+  border: 2px solid #dee3e4;
+  resize: none;
 
-  margin-top: 22px;
 
   font-family: 'PT Sans';
   font-size: 13px;
-  line-height: 18px;
+  line-height: 20px;
   text-align: left;
   color: #a9a9a9;
 }
 
+.message-form::before {
+  content: "";
+
+  position: absolute;
+  top: -7px;
+  left: 0;
+
+  width: 620px;
+  height: 7px;
+  background-color: #ee3643;  
+}
+
 .modal-message input::placeholder {
   padding-top: 13px;
-  padding-left: 16px;
+  padding-left: 13px;
 
   font-family: 'PT Sans';
   font-size: 13px;
@@ -1502,17 +1531,18 @@ a.footer-logo {
 
 .message-item:nth-child(1) {
   margin-left: 80px;
-  margin-top: 48px;
+  margin-top: 44px;
 }
 
 .message-item:nth-child(1) input,
 .message-item:nth-child(2) input {
   min-height: 38px;
+  margin-top: 5px;
 }
 
 .message-item:nth-child(2) {
   margin-left: 20px;
-  margin-top: 48px;  
+  margin-top: 44px;  
 }
 
 .message-item:nth-child(3) {
@@ -1520,7 +1550,7 @@ a.footer-logo {
 
   margin-left: 80px;
   margin-right: 80px;
-  margin-top: 22px;
+  margin-top: 19px;
 }
 
 
@@ -1536,20 +1566,75 @@ a.footer-logo {
   width: 460px;  
   margin-top: 37px;
   margin-bottom: 37px;
+  padding-top: 12px;
+  padding-bottom: 9px;  
 }
+
+.catalog-page .submit-wrapper {
+ justify-content: center;
+}
+
+.catalog-page .submit-wrapper .button {
+  box-sizing: border-box;
+  width: 220px;  
+  margin: 37px 10px; 
+
+  padding-top: 12px;
+  padding-bottom: 9px;  
+}
+
 
 .modal-order {
-  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%); 
+
+  width: 620px;
+  background-color: #ffffff;
+
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.order-message {
-  /*display: flex;*/
-  /*flex-wrap: wrap;  */
+.modal-order::before {
+  content: "";
+
   position: absolute;
-  left: 50%;
-  margin-left: -310px;
-  border: 1px solid green;
-  width: 620px;  
+  top: -7px;
+  left: 0;
+
+  width: 620px;
+  height: 7px;
+  background-color: #ee3643;  
+}
+
+.modal-order .message {
+  position: relative;
+
+  font-family: 'Cuprum';  
+  font-size: 30px;
+  line-height: 30px;
+  text-align: left;  
+
+  padding-top: 35px;  
+  padding-bottom: 38px;
+  padding-left: 180px;
+}
+
+.modal-order .message::before {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 81px;
+
+  width: 69px;
+  height: 69px;
+
+  background-image: url("../img/item-added.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  
+  opacity: 1;
 }
 
 .search input {
@@ -1608,4 +1693,20 @@ a.footer-logo {
   fill: #ee3643;
   opacity: 1;
 }
+
+
+/*-------------------  modal display -------------------*/
+.modal-message {
+  /*display: none;*/
+}
+
+.modal-map {
+  display: none;
+}
+
+.modal-order {
+  /*display: none;*/
+}
+
+
 
