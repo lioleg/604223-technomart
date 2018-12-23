@@ -235,11 +235,14 @@ a {
   display: inline-block;
 }
 
-.header-logo:hover {
+
+.catalog-page .header-logo:hover,
+.catalog-page .footer-logo:hover {
   background-color: #ca2c37;
 }
 
-.header-logo:active {
+.catalog-page .header-logo:active,
+.catalog-page .footer-logo:active {
   background-color: #ba2732;
 }
 
@@ -497,6 +500,8 @@ a {
 
 .footer .footer-contacts {
   margin-left: 3px;
+  color: #f3f7f9; 
+  text-decoration: none;
 }
 
 .footer-catalog-navigation a {
@@ -1289,7 +1294,7 @@ a {
 }
 
 .user-info .user-links {
-  position: relative;
+  /*position: relative;*/
   display: flex;
   justify-content: space-between;
   width: 210px;
@@ -1313,19 +1318,22 @@ a {
   color: rgba(50, 66, 92, 0.3);
 }
 
-.user-links::before {
+.user-cabinet {
+  position: relative;
+}
+
+.user-links .user-cabinet::before {
   content: "";
 
   position: absolute;
   top: 8px;
-  left: 90px;
+  left: -20px;
 
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background-color: #32425c;   
 }
-
 
 /*----------  ----------*/
 .company {
@@ -1502,17 +1510,6 @@ a.footer-logo {
   background-color: #ee3643;  
 }
 
-.modal-message input::placeholder {
-  padding-top: 13px;
-  padding-left: 13px;
-
-  font-family: 'PT Sans';
-  font-size: 13px;
-  line-height: 18px;
-  text-align: left;
-  color: #a9a9a9;
-}
-
 .message-form {
   display: flex;
   flex-wrap: wrap;  
@@ -1533,9 +1530,21 @@ a.footer-logo {
 .message-item input {
   width: inherit;  
   box-sizing: border-box;
+
   border: 2px solid #dee3e4;
   border-radius: 3px;
+
   outline: none;
+
+  padding-top: 0px;
+  padding-left: 13px;
+
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  color: #a9a9a9;
+
 }
 
 .message-item input:hover {
@@ -1555,6 +1564,7 @@ a.footer-logo {
 .message-item:nth-child(2) input {
   min-height: 38px;
   margin-top: 5px;
+
 }
 
 .message-item:nth-child(2) {
@@ -1663,8 +1673,8 @@ a.footer-logo {
 
   box-sizing: border-box;
   width: 270px;
-  padding-top: 11px;
-  padding-bottom: 13px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   padding-left: 49px;
 
   background-color: #32425c;
@@ -1714,7 +1724,7 @@ a.footer-logo {
 
 /*-------------------  modal display -------------------*/
 .modal-message {
-  /*display: none;*/
+  display: none;
 }
 
 .modal-map {
@@ -1722,7 +1732,7 @@ a.footer-logo {
 }
 
 .modal-order {
-  /*display: none;*/
+  display: none;
 }
 
 
